@@ -1,0 +1,81 @@
+@use '@angular/material' as mat;
+
+$teal-palette: (
+  50: #e0efee,
+  100: #b3d6d5,
+  200: #80bbb9,
+  300: #4d9f9c,
+  400: #268b87,
+  500: #007672,
+  600: #006e6a,
+  700: #00635f,
+  800: #005955,
+  900: #004642,
+  A100: #7afff5,
+  A200: #47fff1,
+  A400: #14ffee,
+  A700: #00fae7,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$pink-palette: (
+  50: #fbe0ea,
+  100: #f6b3ca,
+  200: #f080a6,
+  300: #e94d82,
+  400: #e52668,
+  500: #e0004d,
+  600: #dc0046,
+  700: #d8003d,
+  800: #d30034,
+  900: #cb0025,
+  A100: #fff3f4,
+  A200: #ffc0c7,
+  A400: #ff8d9a,
+  A700: #ff7484,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$my-app-primary: mat.define-palette($teal-palette);
+$my-app-accent: mat.define-palette($pink-palette);
+$my-app-warn: mat.define-palette($pink-palette);
+
+$my-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-app-primary,
+      accent: $my-app-accent,
+      warn: $my-app-warn
+    )
+  )
+);
